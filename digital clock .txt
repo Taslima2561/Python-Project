@@ -1,0 +1,17 @@
+from tkinter import *
+#from tkinter.ttk import *
+from time import strftime
+
+dcl = Tk()
+dcl.title("Clock")
+
+def time():
+    string = strftime('%H:%M:%S %p %a %B ')
+    label.config(text=string)
+    #label.after(1000, time)
+
+label = Label(dcl,font=("roboto", 90), background = "green", foreground = "white",weight =70)
+label.pack(anchor='center')
+time()
+
+mainloop()
